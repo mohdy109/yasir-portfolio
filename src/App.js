@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
+import react from 'react';
+import Navbar from '../src/components/Navbar';
+import Home from '../src/components/Home';
+import Skills from '../src/components/Skills';
+import Project from '../src/components/Project';
+import Experience from '../src/components/Experience';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
+import {  Route, Routes } from "react-router-dom"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+<Navbar/>
+  
+ <Routes>
+
+  <Route  path="/"  element ={<Home/>}/>
+  <Route  path="/skills" exact  element={ <Skills/> }/>
+  <Route  path="/project" exact  element={ <Project/> }/>
+  <Route  path="/experience" exact  element={ <Experience/> }/>
+
+
+</Routes>
+    </>
   );
 }
 
