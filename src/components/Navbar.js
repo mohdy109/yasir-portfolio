@@ -14,7 +14,7 @@ const  handleClick = () => setClicked(!clicked)
 
 <h1 className={classes.resume} >
 
-<a style={{ color: 'inherit', textDecoration: 'inherit'}} href='https://drive.google.com/file/d/1LmSBjGux3OXjw7RDKYRUPd9HlNcuLxOp/view?usp=sharing'>RESUME</a></h1>
+<a style={{ color: 'inherit', textDecoration: 'inherit'}} href='https://drive.google.com/file/d/1wnqv1MqEQaUtV14FTAbiMatXROKuwkiU/view?usp=sharing'>RESUME</a></h1>
 
 <ul className={clicked ? classes.mobilelinks : classes.navlinks}  onClick={()=>setClicked(false)} >
 

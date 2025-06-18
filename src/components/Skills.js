@@ -1,186 +1,174 @@
-import React from 'react';
-import classes from '../assets/css/Skills.module.css'
-import { FaAws,FaJenkins,FaJava,FaReact,FaHtml5,FaCss3,FaBootstrap,FaMicrosoft } from 'react-icons/fa';
-import { SiAzurepipelines,SiNetlify,SiHeroku,SiJest,SiGraphql,SiPostgresql,SiMongodb,SiFirebase,SiPostman,SiJavascript,SiTypescript,SiRedux,SiExpress,SiSpringboot } from "react-icons/si"
-import { FiFigma } from 'react-icons/fi';
-import { DiGit } from 'react-icons/di';
-import { GrNode,GrMysql,GrDocker } from 'react-icons/gr';
-import { useEffect } from 'react';
-import { motion } from 'framer-motion'
-import "aos/dist/aos.css"
-import Aos from "aos"
+import React, { useEffect } from "react";
+import classes from "../assets/css/Skills.module.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import {
+  FaAws,
+  FaJenkins,
+  FaJava,
+  FaReact,
+  FaHtml5,
+  FaCss3,
+  FaBootstrap,
+  FaMicrosoft,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaNode,
+  FaDocker,
+  FaHardHat,
+  FaEthereum,
+} from "react-icons/fa";
+
+import {
+  SiD3Dotjs,
+  SiLangchain,
+  SiAzurepipelines,
+  SiNetlify,
+  SiHeroku,
+  SiJest,
+  SiGraphql,
+  SiPostgresql,
+  SiMongodb,
+  SiFirebase,
+  SiPostman,
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiExpress,
+  SiSpringboot,
+  SiNextdotjs,
+  SiNestjs,
+  SiWeb3Dotjs,
+  SiEthers,
+  SiOpenai,
+  SiVercel,
+  SiFramer,
+  SiPnpm,
+  SiVite,
+  SiJfrogpipelines,
+  SiHuggingface,
+  SiPytest,
+} from "react-icons/si";
+
+import { TbBrandD3, TbFileDatabase, TbBrandReactNative } from "react-icons/tb";
+
+import { DiGit } from "react-icons/di";
+
+import { GrMysql } from "react-icons/gr";
+
+import { FiFigma } from "react-icons/fi";
 
 const Skills = () => {
- 
   useEffect(() => {
-    Aos.init({duration:1000});
+    Aos.init({ duration: 1000 });
   }, []);
 
-  return<div className={classes.yasir}>
- 
-    {/*frontend*/}
+  const Section = ({ title, items }) => (
+    <>
+      <h1 className={classes.skills} style={{ fontSize: "2.3rem" }}>
+        {title}
+      </h1>
+      <div data-aos="zoom-out" data-aos-once="true" className={classes.tech}>
+        {items.map(({ icon: Icon, label }, i) => (
+          <div className={classes.box} key={i}>
+            <Icon />
+            <p>{label}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 
-   <h1 className={classes.skills}>
-     Tech i'm familiar with:
-    </h1>
-    
-<h1 className={classes.skills} style={{fontSize:"2.3rem"}}>Frontend</h1>
-  <div  data-aos-once="true" data-aos="zoom-out"  className={classes.tech}>
+  return (
+    <div className={classes.yasir}>
+      <h1 className={classes.skills}>Tech I'm Familiar With:</h1>
 
+      <Section
+        title="Frontend"
+        items={[
+          { icon: FiFigma, label: "Figma" },
+          { icon: FaHtml5, label: "HTML5" },
+          { icon: FaCss3, label: "CSS3" },
+          { icon: FaBootstrap, label: "Bootstrap" },
+          { icon: SiJavascript, label: "JavaScript" },
+          { icon: SiTypescript, label: "TypeScript" },
+          { icon: FaReact, label: "React.js" },
+          { icon: SiRedux, label: "Redux" },
+          { icon: SiNextdotjs, label: "Next.js" },
+          { icon: SiFramer, label: "Framer Motion" },
+          { icon: TbBrandD3, label: "D3.js" },
+          { icon: TbBrandReactNative, label: "React-Native" },
+        ]}
+      />
 
-<div  className={classes.box} >
-<FiFigma/>
-<p1>Figma</p1>
-</div>
+      <Section
+        title="Backend"
+        items={[
+          { icon: FaNode, label: "Node.js" },
+          { icon: SiExpress, label: "Express.js" },
+          { icon: SiNestjs, label: "NestJS" },
+          { icon: FaMicrosoft, label: "ASP.NET" },
+          { icon: SiGraphql, label: "GraphQL (Apollo)" },
+          { icon: SiFirebase, label: "Firebase" },
+          { icon: SiPostman, label: "Postman" },
+        ]}
+      />
 
-<div className={classes.box} >
-<FaHtml5/>
-<p1>Html5</p1>
-</div>
+      <Section
+        title="Databases"
+        items={[
+          { icon: SiPostgresql, label: "PostgreSQL" },
+          { icon: GrMysql, label: "MySQL" },
+          { icon: SiMongodb, label: "MongoDB" },
+        ]}
+      />
 
-<div className={classes.box} >
-<FaCss3/>
-<p1>Css3</p1>
-</div>
+      <Section
+        title="DevOps & Deployment"
+        items={[
+          { icon: FaDocker, label: "Docker" },
+          { icon: SiJfrogpipelines, label: "CI/CD" },
+          { icon: FaJenkins, label: "Jenkins" },
+          { icon: FaAws, label: "AWS (EC2, S3, Lambda)" },
+          { icon: SiNetlify, label: "Netlify" },
+          { icon: SiHeroku, label: "Heroku" },
+          { icon: SiVercel, label: "Vercel" },
+          { icon: DiGit, label: "Git / GitHub" },
+          { icon: SiPnpm, label: "pnpm / npm" },
+          { icon: SiVite, label: "Vite.js" },
+        ]}
+      />
 
-<div className={classes.box} >
-<FaBootstrap/>
-<p1>Bootstrap</p1>
-</div>
+      <Section
+        title="Blockchain & Web3"
+        items={[
+          { icon: SiD3Dotjs, label: "Web3.js" },
+          { icon: FaEthereum, label: "Ethers.js" },
+          { icon: FaHardHat, label: "Hardhat" },
+        ]}
+      />
 
-<div className={classes.box} >
-<SiJavascript/>
-<p1>JavaScript</p1>
-</div>
+      <Section
+        title="AI & Tools"
+        items={[
+          { icon: SiOpenai, label: "OpenAI API" },
+          { icon: SiLangchain, label: "LangChain" },
+          { icon: SiPostman, label: "Prompt Engineering" },
+          { icon: SiHuggingface, label: "Huggingface" },
+          { icon: TbFileDatabase, label: "Vector Database" },
+        ]}
+      />
 
-<div className={classes.box} >
-<FaReact/>
-<p1>React</p1>
-</div>
-
-<div className={classes.box} >
-<SiRedux/>
-<p1>Redux</p1>
-</div>
-
-<div className={classes.box} >
-<SiTypescript/>
-<p1>TypeSript</p1>
-</div>
-
-</div>
-
-
-
-
-{/*backend*/}
-
-<h1 className={classes.skills} style={{fontSize:"2.3rem"}} >Backend</h1>
-  <div data-aos="zoom-out"  data-aos-once="true" className={classes.tech}>
-      
-<div className={classes.box} >
-<GrNode/>
-<p1>Node</p1>
-</div>
-
-<div className={classes.box} >
-<SiExpress/>
-<p1>Express</p1>
-</div>
-
-<div className={classes.box} >
-<FaJava/>
-<p1>Java</p1>
-</div>
-
-<div className={classes.box} >
-<SiSpringboot/>
-<p1>Springboot</p1>
-</div>
-
-<div className={classes.box} >
-<FaMicrosoft/>
-<p1>ASP.net</p1>
-</div>
-
-<div className={classes.box} >
-<SiPostman/>
-<p1>Postman</p1>
-</div>
-
-<div className={classes.box} >
-<SiGraphql/>
-<p1>GraphQl</p1>
-</div>
-
-<div className={classes.box} >
-<SiFirebase/>
-<p1>Firebase</p1>
-</div>
-
-<div className={classes.box} >
-<GrMysql/>
-<p1>Mysql</p1>
-</div>
-
-<div className={classes.box} >
-<SiMongodb/>
-<p1>Mongodb</p1>
-</div>
-
-<div className={classes.box} >
-<SiPostgresql/>
-<p1>Postgresql</p1>
-</div>
-
-</div>
-
-{/*deployment*/}
-
-<h1 className={classes.skills} style={{fontSize:"2.3rem"}}  >Deployment</h1>
-  <div  data-aos="zoom-out" data-aos-once="true" className={classes.tech}>
-      
-  <div className={classes.box} >
-<GrDocker/>
-<p1>Docker</p1>
-</div>
-<div className={classes.box} >
-<SiAzurepipelines/>
-<p1>CI/CD</p1>
-</div>
-
-
-
-  <div className={classes.box} >
-<FaJenkins/>
-<p1>Jenkins</p1>
-</div>
-<div className={classes.box} >
-<SiJest/>
-<p1>Jest</p1>
-</div>
-  
-  <div className={classes.box} >
-<FaAws/>
-<p1>Aws</p1>
-</div>
-<div className={classes.box} >
-<SiHeroku/>
-<p1>Heroku</p1>
-</div>
-<div className={classes.box} >
-<SiNetlify/>
-<p1>Netlify</p1>
-</div>
-<div className={classes.box} >
-<DiGit/>
-<p1>Git</p1>
-</div>
-
-</div>
-
-</div>
+      <Section
+        title="Testing"
+        items={[
+          { icon: SiJest, label: "Jest" },
+          { icon: SiPytest, label: "Supertest" },
+        ]}
+      />
+    </div>
+  );
 };
 
 export default Skills;
-

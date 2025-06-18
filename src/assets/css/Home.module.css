@@ -11,9 +11,9 @@
 }
 
 .img{
-    border-radius: 1000000000px;
+  
     height: 300px;
-    width: 300px;
+    width: 250px;
     display: block;
     
 }
@@ -23,6 +23,8 @@
   color: #fff;
   font-size: larger;
   width: 50%;
+  min-height: 140px;
+  
 }
 .head{
     
@@ -43,7 +45,9 @@
 @media screen and (max-width:960px){
 
     .heading{
+        
         width: 80%;
+        min-height: 160px;
         }
         .icon{
             
