@@ -3,7 +3,15 @@ import classes from "../assets/css/Project.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
+import ENcryptedStickymain from "../assets/images/ENcryptedStickymain.jpeg";
+import GptMain from "../assets/images/GptMain.jpeg";
+import GPTQuestions from "../assets/images/GPTQuestions.jpeg";
+import GPTSearch from "../assets/images/GPTSearch.jpeg";
+import NFtProofMain from "../assets/images/NFtProofMain.jpeg";
+import Proof1 from "../assets/images/Proof1.jpeg";
+import Proof2 from "../assets/images/Proof2.jpeg";
+import ProofChoose from "../assets/images/ProofChoose.jpeg";
+import ProofMint from "../assets/images/ProofMint.jpeg";
 import web from "../assets/images/web.png";
 import web2 from "../assets/images/web2.png";
 import web3 from "../assets/images/web4.png";
@@ -17,8 +25,8 @@ import elec4 from "../assets/images/elec4.jpeg";
 const projects = [
   {
     title: "WEB3-GPT-CHATBOT",
-    link: "#",
-    images: [web3],
+    link: "https://web3-gpt-chatbot.netlify.app/",
+    images: [GptMain,GPTQuestions,GPTSearch],
     description: [
       "Web3-native GPT chatbot with wallet authentication.",
       "Powered by LangChain, Vercel, and Pinecone for vector storage.",
@@ -27,8 +35,8 @@ const projects = [
   },
   {
     title: "NFT-PROOFAI-APP",
-    link: "#",
-    images: [cam1],
+    link: "https://nft-proofai-app.netlify.app/",
+    images: [NFtProofMain,Proof1,Proof2,ProofChoose,ProofMint],
     description: [
       "React Native Expo app to capture real-world proof (photo/voice).",
       "AI summary and classification via Hugging Face.",
@@ -38,8 +46,8 @@ const projects = [
   },
   {
     title: "WEB3-AI-NOTES",
-    link: "#",
-    images: [web2],
+    link: "https://ai-web3-notes.netlify.app/",
+    images: [ENcryptedStickymain],
     description: [
       "Sticky notes dApp with MetaMask auth and IPFS storage.",
       "Used CryptoJS for encryption, ONNX + Hugging Face for local AI summarization.",

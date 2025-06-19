@@ -69,8 +69,7 @@
   .projectImage {
     max-height: 350px;
     width: 80%;         /* narrower width */
-    max-width: 600px;
-    object-fit: cover;
+    object-fit: contain;  
     border-radius: 10px;
     margin: auto;       /* center the image */
   }
